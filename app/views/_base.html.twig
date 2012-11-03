@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{% block title %}{% endblock %}</title>
+    <title>Banklink - PHP library{% block title %}{% endblock %}</title>
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -22,7 +22,7 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Language <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         {% for locale in ['et', 'ru', 'en'] %}
-                            <li class="{% if locale == currentLocale %}active{% endif %}">
+                            <li class="{% if locale == app.locale %}active{% endif %}">
                                 <a href="{{ path('homepage', { '_locale' : locale}) }}">{{ locale | trans }}</a>
                             </li>
                         {% endfor %}

@@ -1,0 +1,110 @@
+{% extends '_base.html.twig' %}
+
+{% block content %}
+    <div class="jumbotron">
+      <p class="lead">Banklink is a PHP library that makes integrating various internet bank services ("bank links") easy, safe and reliable.</p>
+      <a class="btn btn-large btn-success" href="#">Download</a>
+      <a class="btn btn-large btn-info" href="#">See how it works</a>
+    </div>
+
+    <hr>
+
+    <h3 id="about">About</h3>
+    <p>Banklink is distributed with MIT license. This means that you're free to use it, copy it, modify it at no cost.</p>
+
+    <div class="row-fluid marketing">
+      <div class="span6">
+        <h4>Open source</h4>
+        <p>Banklink is distributed with MIT license. This means that you're free to use it, copy it, modify it at no cost.</p>
+
+        <h4>Documentation</h4>
+        <p>Banklink functionality is well-documented with both real-life examples and PHPDoc blocks.</p>
+
+        <h4>Modern</h4>
+        <p>Banklink is built with the help of modern technologies and services, such as Github, Travis CI, Composer.</p>
+      </div>
+
+      <div class="span6">
+        <h4>Architecture</h4>
+        <p>Banklink is built with OOP architecture in mind. It's not only easy to use, but also easy to extend.</p>
+
+        <h4>Test coverage</h4>
+        <p>Banklink code stability is backed up by numerous passing tests.</p>
+
+        <h4>PSR compliant</h4>
+        <p>Banklink is compliant with PSR-0/1/2 standards.</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <h3 id="support-status">Support status</h3>
+    <p>Banklink is distributed with MIT license. This means that you're free to use it, copy it, modify it at no cost.</p>
+
+    <div class="row-fluid marketing">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Bank</th>
+                <th>Payments</th>
+                <th>Authentication</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="">Swedbank</a></td>
+                <td><span class="label label-success">Yes</span></td>
+                <td><span class="label label-warning">No</span></td>
+              </tr>
+              <tr>
+                <td>LHV</td>
+                <td><span class="label label-success">Yes</span></td>
+                <td><span class="label label-warning">No</span></td>
+              </tr>
+              <tr>
+                <td>SEB</td>
+                <td><span class="label label-success">Yes</span></td>
+                <td><span class="label label-warning">No</span></td>
+              </tr>
+              <tr>
+                <td>Nordea</td>
+                <td><span class="label label-important">No</span></td>
+                <td><span class="label label-warning">No</span></td>
+              </tr>
+              <tr>
+                <td>EstCard</td>
+                <td><span class="label label-important">No</span></td>
+                <td><span class="label label-warning">No</span></td>
+              </tr>
+              <tr>
+                <td>Sampo</td>
+                <td><span class="label label-success">Yes</span></td>
+                <td><span class="label label-warning">No</span></td>
+              </tr>
+              <tr>
+                <td>Krediidipank</td>
+                <td><span class="label label-success">Yes</span></td>
+                <td><span class="label label-warning">No</span></td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+
+    <h3 id="download">Download</h3>
+
+    <div class="row-fluid marketing">
+        <p>The recommended way to install Banklink is through composer. Just create a <code>composer.json</code> file with contents below and run the <code>php composer.phar install</code> command to install it:</p>
+<pre>
+{
+    "require": {
+        "inori/banklink": "1.0.*"
+    }
+}</pre>
+
+        <p>Alternatively, you can download it directly on <a href="#">GitHub</a> downloads page.</p>
+    </div>
+
+    <hr>
+
+{% endblock %}

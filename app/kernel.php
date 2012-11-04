@@ -27,3 +27,16 @@ $app['translator'] = $app->share($app->extend('translator', function($translator
 
 // Routing in templates
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
+
+$app['swedbank'] = $app->share(function () {
+    $protocol = new \Banklink\Protocol\iPizza(
+        'uid261056',
+        'Banklink',
+        '1199331133112',
+        __DIR__.'/data/swedbank/private_key.pem',
+        __DIR__.'/data/swedbank/public_key.pem',
+        'http://google.com'
+    );
+
+    return new \Banklink\Swedbank($protocol);
+});

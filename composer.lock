@@ -1,6 +1,47 @@
 {
-    "hash": "9cd4e0116e3babb4290d500c50c35933",
+    "hash": "715e466d427d2e48ede1d3a4b02fbc35",
     "packages": [
+        {
+            "name": "inori/banklink",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Inori/Banklink",
+                "reference": "v0.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/Inori/Banklink/zipball/v0.1.0",
+                "reference": "v0.1.0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "time": "2012-11-04 16:28:21",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "Banklink": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Marintšenko",
+                    "email": "inoryy@gmail.com"
+                }
+            ],
+            "description": "Banklink is a PHP library that makes integrating various Baltic banks internet services ('bank links') easy, fast and reliable.",
+            "keywords": [
+                "Banklink",
+                "Pangalink",
+                "Baltic bank services"
+            ]
+        },
         {
             "name": "pimple/pimple",
             "version": "dev-master",

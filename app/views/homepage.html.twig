@@ -98,12 +98,12 @@
 <pre>
 {
     "require": {
-        "inori/banklink": "1.0.*"
+        "inori/banklink" : "~0.1"
     }
 }</pre>
 
         <p>Alternatively you can either clone the latest version with git: <code> git clone git//github.com/Inori/Banklink.git</code>
-           or simply download it directly on <a target="_blank" href="https://github.com/Inori/Banklink/downloads">GitHub</a> downloads page.</p>
+           or simply download it directly on <a target="_blank" href="https://github.com/Inori/Banklink/tags">GitHub</a> downloads page.</p>
     </div>
 
     <hr>
@@ -149,13 +149,14 @@
             <a class="btn btn-success">SEB</a>
             <a class="btn btn-success">Sampo</a>
             <a class="btn btn-success">Krediidipank</a>
+            {% include '_form.html.twig' with { 'request' : swedbank } %}
         </div>
         <div id="example-code" class="span12">
             <p>Below is a simple code sample you can copy to your controller/template and see in action:</p>
 <pre>
 // get Banklink instances for banks you want to support
 // Protip: use <a href="">DIC</a> to handle Banklink classes instantiation
-$protocol = new \Inori\Banklink\Protocol\iPizza(
+$protocol = new \Banklink\Protocol\iPizza(
     'uu11223344',
     'Banklink',
     '119933113300',
@@ -163,14 +164,14 @@ $protocol = new \Inori\Banklink\Protocol\iPizza(
     __DIR__.'/../data/Swedbank/public_key.pem',
     'http://banklink.inoryy.com/banklink/swedbank'
 );
-$swedbank = new \Inori\Banklink\Swedbank($protocol);
+$swedbank = new \Banklink\Swedbank($protocol);
 
 // Prepare requests with desired parameters, then pass them to your templates
 $swedbankRequest = $swedbank->preparePaymentRequest(1, 25, $message = 'Beer + Movie');
 </pre>
 <pre>
 &lt;form action="&lt;?php echo $swedbankRequest->getRequestUrl() ?&gt;" method="post"&gt;
-    &lt;?php foreach ($swedbankRequest->getRequestData() as $field): ?&gt;
+    &lt;?php foreach ($swedbankRequest->getRequestData() as $name =&gt; $field): ?&gt;
         &lt;input type="hidden" value="&lt;?php echo $field ?&gt;" /&gt;
     &lt;?php endforeach; ?&gt;
 

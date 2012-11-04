@@ -2,14 +2,14 @@
 
 {% block content %}
     <div class="jumbotron">
-      <p class="lead">Banklink is a PHP library that makes integrating various internet bank services ("bank links") easy, safe and reliable.</p>
-      <a class="btn btn-large btn-success" href="#">Download</a>
+      <p class="lead">{{ 'pitch_line' | trans }}</p>
+      <a class="btn btn-large btn-success" href="#">{{ 'download' | trans }}</a>
       <a class="btn btn-large btn-info" href="#">See how it works</a>
     </div>
 
     <hr>
 
-    <h3 id="about">About</h3>
+    <h3 id="about">{{ 'about' | trans }}</h3>
     <p>Banklink is distributed with MIT license. This means that you're free to use it, copy it, modify it at no cost.</p>
 
     <div class="row-fluid marketing">
@@ -45,46 +45,46 @@
         <table class="table">
             <thead>
               <tr>
-                <th>Bank</th>
-                <th>Payments</th>
-                <th>Authentication</th>
+                <th>{{ 'bank' | trans }}</th>
+                <th>{{ 'payments' | trans }}</th>
+                <th>{{ 'authentication' | trans }}</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><a href="">Swedbank</a></td>
-                <td><span class="label label-success">Yes</span></td>
-                <td><span class="label label-warning">No</span></td>
+                <td><span class="label label-success">{{ 'yes' | trans }}</span></td>
+                <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
               <tr>
                 <td>LHV</td>
-                <td><span class="label label-success">Yes</span></td>
-                <td><span class="label label-warning">No</span></td>
+                <td><span class="label label-success">{{ 'yes' | trans }}</span></td>
+                <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
               <tr>
                 <td>SEB</td>
-                <td><span class="label label-success">Yes</span></td>
-                <td><span class="label label-warning">No</span></td>
+                <td><span class="label label-success">{{ 'yes' | trans }}</span></td>
+                <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
               <tr>
                 <td>Nordea</td>
-                <td><span class="label label-important">No</span></td>
-                <td><span class="label label-warning">No</span></td>
+                <td><span class="label label-important">{{ 'no' | trans }}</span></td>
+                <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
               <tr>
                 <td>EstCard</td>
-                <td><span class="label label-important">No</span></td>
-                <td><span class="label label-warning">No</span></td>
+                <td><span class="label label-important">{{ 'no' | trans }}</span></td>
+                <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
               <tr>
                 <td>Sampo</td>
-                <td><span class="label label-success">Yes</span></td>
-                <td><span class="label label-warning">No</span></td>
+                <td><span class="label label-success">{{ 'yes' | trans }}</span></td>
+                <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
               <tr>
                 <td>Krediidipank</td>
-                <td><span class="label label-success">Yes</span></td>
-                <td><span class="label label-warning">No</span></td>
+                <td><span class="label label-success">{{ 'yes' | trans }}</span></td>
+                <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
             </tbody>
         </table>

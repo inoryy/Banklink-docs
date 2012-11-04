@@ -2,4 +2,18 @@ et: Eesti
 ru: Vene
 en: Inglise
 
-about : Teekist
+library: Teek
+
+about : Teegist
+support_status: Support status
+download: Laadi
+examples: Näited
+
+yes: Jah
+no: Ei
+
+pitch_line: Banklink is a PHP library that makes integrating various internet bank services ("bank links") easy, safe and reliable.
+
+bank: Pank
+payments: Maksed
+authentication: Autoriseerimine

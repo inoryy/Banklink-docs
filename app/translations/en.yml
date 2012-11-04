@@ -2,4 +2,18 @@ et: Estonian
 ru: Russian
 en: English
 
+library: Library
+
 about : About
+support_status: Support status
+download: Download
+examples: Examples
+
+yes: Yes
+no: No
+
+pitch_line: Banklink is a PHP library that makes integrating various internet bank services ("bank links") easy, fast and reliable.
+
+bank: Bank
+payments: Payments
+authentication: Authentication

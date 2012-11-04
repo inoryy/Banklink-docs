@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Banklink - PHP library{% block title %}{% endblock %}</title>
+    <title>Banklink - PHP {{ 'library' | trans }}{% block title %}{% endblock %}</title>
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -14,12 +14,12 @@
     <div class="container-narrow">
         <div class="masthead">
             <ul class="nav nav-pills pull-right">
-                <li class="active"><a href="#about">{{ 'about' | trans }}</a></li>
-                <li><a href="#support-status">Support status</a></li>
-                <li><a href="#download">Download</a></li>
-                <li><a href="#examples">Examples</a></li>
+                <li><a href="#about">{{ 'about' | trans }}</a></li>
+                <li><a href="#support-status">{{ 'support_status' | trans }}</a></li>
+                <li><a href="#download">{{ 'download' | trans }}</a></li>
+                <li><a href="#examples">{{ 'examples' | trans }}</a></li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Language <b class="caret"></b></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ app.locale | trans }} <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         {% for locale in ['et', 'ru', 'en'] %}
                             <li class="{% if locale == app.locale %}active{% endif %}">

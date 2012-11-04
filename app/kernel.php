@@ -28,6 +28,8 @@ $app['translator'] = $app->share($app->extend('translator', function($translator
 // Routing in templates
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
+
+// Prepare banklinks
 $app['swedbank'] = $app->share(function () {
     $protocol = new \Banklink\Protocol\iPizza(
         'uid261056',

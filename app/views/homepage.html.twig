@@ -3,8 +3,8 @@
 {% block content %}
     <div class="jumbotron">
       <p class="lead">{{ 'pitch_line' | trans }}</p>
-      <a class="btn btn-large btn-success" href="#">{{ 'download' | trans }}</a>
-      <a class="btn btn-large btn-info" href="#">See how it works</a>
+      <a class="btn btn-large btn-success" href="#download">{{ 'download' | trans }}</a>
+      <a class="btn btn-large btn-info" href="#examples">See how it works</a>
     </div>
 
     <hr>
@@ -32,7 +32,7 @@
         <p>Banklink code stability is backed up by numerous passing tests.</p>
 
         <h4>PSR compliant</h4>
-        <p>Banklink is compliant with PSR-0/1/2 standards.</p>
+        <p>Banklink is compliant with <a target="_blank" href="http://www.php-fig.org/">PSR-0/1/2</a> standards.</p>
       </div>
     </div>
 
@@ -52,37 +52,37 @@
             </thead>
             <tbody>
               <tr>
-                <td><a href="">Swedbank</a></td>
+                <td><a target="_blank" href="http://www.swedbank.ee/">Swedbank</a></td>
                 <td><span class="label label-success">{{ 'yes' | trans }}</span></td>
                 <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
               <tr>
-                <td>LHV</td>
+                <td><a target="_blank" href="http://www.lhv.ee/">LHV</a></td>
                 <td><span class="label label-success">{{ 'yes' | trans }}</span></td>
                 <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
               <tr>
-                <td>SEB</td>
+                <td><a target="_blank" href="http://www.seb.ee/">SEB</a></td>
                 <td><span class="label label-success">{{ 'yes' | trans }}</span></td>
                 <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
               <tr>
-                <td>Nordea</td>
+                <td><a target="_blank" href="http://www.nordea.ee/">Nordea</a></td>
                 <td><span class="label label-important">{{ 'no' | trans }}</span></td>
                 <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
               <tr>
-                <td>EstCard</td>
+                <td><a target="_blank" href="http://www.estcard.ee/">EstCard</a></td>
                 <td><span class="label label-important">{{ 'no' | trans }}</span></td>
                 <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
               <tr>
-                <td>Sampo</td>
+                <td><a target="_blank" href="http://www.sampopank.ee/">Sampo</a></td>
                 <td><span class="label label-success">{{ 'yes' | trans }}</span></td>
                 <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
               <tr>
-                <td>Krediidipank</td>
+                <td><a target="_blank" href="http://www.krediidipank.ee/">Krediidipank</a></td>
                 <td><span class="label label-success">{{ 'yes' | trans }}</span></td>
                 <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
@@ -94,7 +94,7 @@
     <h3 id="download">Download</h3>
 
     <div class="row-fluid marketing">
-        <p>The recommended way to install Banklink is through composer. Just create a <code>composer.json</code> file with contents below and run the <code>php composer.phar install</code> command to install it:</p>
+        <p>The recommended way to install Banklink is through <a target="_blank" href="http://getcomposer.org/">Composer</a>. Just create a <code>composer.json</code> file with contents below and run the <code>php composer.phar install</code> command to install it:</p>
 <pre>
 {
     "require": {
@@ -102,7 +102,82 @@
     }
 }</pre>
 
-        <p>Alternatively, you can download it directly on <a href="#">GitHub</a> downloads page.</p>
+        <p>Alternatively you can either clone the latest version with git: <code> git clone git//github.com/Inori/Banklink.git</code>
+           or simply download it directly on <a target="_blank" href="https://github.com/Inori/Banklink/downloads">GitHub</a> downloads page.</p>
+    </div>
+
+    <hr>
+
+    <h3 id="examples">Examples</h3>
+
+    <div class="row-fluid marketing">
+        <div class="span12">
+            <p>Below is a demo application that shows you how Banklink applications work, requests go to <a href="https://www.pangalink.net/">Pangalink</a> service. Code is available on <a href="https://github.com/Inori/Banklink-docs">github</a>.</p>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>{{ 'name' | trans }}</th>
+                    <th>{{ 'quantity' | trans }}</th>
+                    <th>{{ 'price_per_item' | trans }}</th>
+                    <th>{{ 'price_total' | trans }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Guinness Original/Extra Stout</td>
+                    <td>5</td>
+                    <td>2 &euro;</td>
+                    <td>10 &euro;</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>The Shawshank Redemption (Blu-Ray Disc)</td>
+                    <td>1</td>
+                    <td>15 &euro;</td>
+                    <td>15 &euro;</td>
+                  </tr>
+                </tbody>
+            </table>
+            <div class="pull-right"><strong>Total</strong>: 25 &euro;</div>
+        </div>
+        <div id="checkout" class="span12">
+            <div class="alert alert-info">To start the payment simply click on suitable Bank name below</div>
+            <a class="btn btn-success">Swedbank</a>
+            <a class="btn btn-success">LHV</a>
+            <a class="btn btn-success">SEB</a>
+            <a class="btn btn-success">Sampo</a>
+            <a class="btn btn-success">Krediidipank</a>
+        </div>
+        <div id="example-code" class="span12">
+            <p>Below is a simple code sample you can copy to your controller/template and see in action:</p>
+<pre>
+// get Banklink instances for banks you want to support
+// Protip: use <a href="">DIC</a> to handle Banklink classes instantiation
+$protocol = new \Inori\Banklink\Protocol\iPizza(
+    'uu11223344',
+    'Banklink',
+    '119933113300',
+    __DIR__.'/../data/Swedbank/private_key.pem',
+    __DIR__.'/../data/Swedbank/public_key.pem',
+    'http://banklink.inoryy.com/banklink/swedbank'
+);
+$swedbank = new \Inori\Banklink\Swedbank($protocol);
+
+// Prepare requests with desired parameters, then pass them to your templates
+$swedbankRequest = $swedbank->preparePaymentRequest(1, 25, $message = 'Beer + Movie');
+</pre>
+<pre>
+&lt;form action="&lt;?php echo $swedbankRequest->getRequestUrl() ?&gt;" method="post"&gt;
+    &lt;?php foreach ($swedbankRequest->getRequestData() as $field): ?&gt;
+        &lt;input type="hidden" value="&lt;?php echo $field ?&gt;" /&gt;
+    &lt;?php endforeach; ?&gt;
+
+    &lt;input type="submit" value="Swedbank" /&gt;
+&lt;/form&gt;
+</pre>
+        </div>
     </div>
 
     <hr>

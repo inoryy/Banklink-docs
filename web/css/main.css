@@ -36,3 +36,12 @@ body {
 .dropdown-menu .active > a, .dropdown-menu .active > a:hover {
     color: #ffffff;
 }
+
+#checkout, #example-code {
+    margin-left: 0px;
+    margin-top: 20px;
+}
+
+#example-code {
+    margin-top: 60px;
+}

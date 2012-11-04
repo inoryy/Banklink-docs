@@ -17,3 +17,8 @@ pitch_line: Banklink is a PHP library that makes integrating various internet ba
 bank: Bank
 payments: Payments
 authentication: Authentication
+
+name: Name
+quantity: Quantity
+price_per_item: Price / item
+price_total: Price total

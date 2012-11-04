@@ -13,7 +13,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 
 // Translations
 $app->register(new Silex\Provider\TranslationServiceProvider(), array(
-    'locale_fallback' => 'et',
+    'locale_fallback' => 'en', // switch to 'et' when fully implemented
 ));
 $app['translator'] = $app->share($app->extend('translator', function($translator, $app) {
     $translator->addLoader('yaml', new \Symfony\Component\Translation\Loader\YamlFileLoader());

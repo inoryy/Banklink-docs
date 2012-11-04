@@ -10,7 +10,7 @@
     <link href="/css/main.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body onload="prettyPrint()">
     <div class="container-narrow">
         <div class="masthead">
             <ul class="nav nav-pills pull-right">
@@ -18,6 +18,7 @@
                 <li><a href="#support-status">{{ 'support_status' | trans }}</a></li>
                 <li><a href="#download">{{ 'download' | trans }}</a></li>
                 <li><a href="#examples">{{ 'examples' | trans }}</a></li>
+                {# @todo add translations
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ app.locale | trans }} <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -28,8 +29,9 @@
                         {% endfor %}
                     </ul>
                 </li>
+                #}
             </ul>
-            <h3 class="muted">Banklink</h3>
+            <h3><a href="{{ url('homepage') }}">Banklink</a></h3>
         </div>
 
       {% block content %}{% endblock %}

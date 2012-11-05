@@ -1,5 +1,31 @@
 {% extends '_base.html.twig' %}
 
+{% block navigation %}{% endblock %}
+
 {% block content %}
-    <p class="lead">{{ 'success' | trans }}</p>
+<div class="row-fluid marketing">
+    <div class="alert alert-success">Congratulations! Payment processed succesfully!</div>
+    <h4>Payment details:</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>{{ 'order_id' | trans }}</th>
+                <th>{{ 'transaction_id' | trans }}</th>
+                <th>{{ 'sum' | trans }}</th>
+                <th>{{ 'date' | trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ response.orderId }}</td>
+                <td>{{ response.transactionId }}</td>
+                <td>{{ response.sum }}</td>
+                <td>{{ response.transactionDate | date('d/m/y') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Order details:</h4>
+{% include '_payment_table.html.twig' %}
+</div>
 {% endblock %}

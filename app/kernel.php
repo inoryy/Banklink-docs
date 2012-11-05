@@ -30,15 +30,17 @@ $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 
 // Prepare banklinks
-$app['swedbank'] = $app->share(function () {
+$app['swedbank'] = $app->share(function () use($app) {
     $protocol = new \Banklink\Protocol\iPizza(
         'uid261056',
         'Banklink',
         '1199331133112',
         __DIR__.'/data/swedbank/private_key.pem',
         __DIR__.'/data/swedbank/public_key.pem',
-        'http://google.com'
+        $app['url_generator']->generate('payment_callback', array(
+            'bank' => 'swedbank'
+        ), true)
     );
 
-    return new \Banklink\Swedbank($protocol);
+    return new \Banklink\Swedbank($protocol, true);
 });

@@ -3,22 +3,22 @@
     "packages": [
         {
             "name": "inori/banklink",
-            "version": "v0.1.0",
+            "version": "v0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Inori/Banklink",
-                "reference": "v0.1.0"
+                "reference": "v0.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/Inori/Banklink/zipball/v0.1.0",
-                "reference": "v0.1.0",
+                "url": "https://github.com/Inori/Banklink/archive/v0.1.2.zip",
+                "reference": "v0.1.2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
-            "time": "2012-11-04 16:28:21",
+            "time": "2012-11-05 17:46:40",
             "type": "library",
             "installation-source": "dist",
             "autoload": {

@@ -144,12 +144,12 @@
         </div>
         <div id="checkout" class="span12">
             <div class="alert alert-info">To start the payment simply click on suitable Bank name below</div>
-            <a class="btn btn-success">Swedbank</a>
-            <a class="btn btn-success">LHV</a>
-            <a class="btn btn-success">SEB</a>
-            <a class="btn btn-success">Sampo</a>
-            <a class="btn btn-success">Krediidipank</a>
-            {% include '_form.html.twig' with { 'request' : swedbank } %}
+            <a data-bank="swedbank" href="#" class="btn btn-success start-transaction">Swedbank</a>
+            <a data-bank="lhv" href="#" class="btn btn-success start-transaction">LHV</a>
+            <a data-bank="seb" href="#" class="btn btn-success start-transaction">SEB</a>
+            <a data-bank="sampo" href="#" class="btn btn-success start-transaction">Sampo</a>
+            <a data-bank="krediidipank" href="#" class="btn btn-success start-transaction">Krediidipank</a>
+            {% include '_form.html.twig' with { 'request' : swedbank, 'bank' : 'swedbank' } %}
         </div>
         <div id="example-code" class="span12">
             <p>Below is a simple code sample you can copy to your controller/template and see in action:</p>

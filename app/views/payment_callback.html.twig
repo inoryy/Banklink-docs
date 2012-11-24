@@ -4,7 +4,11 @@
 
 {% block content %}
 <div class="row-fluid marketing">
-    <div class="alert alert-success">Congratulations! Payment processed succesfully!</div>
+    {% if response.isSuccesful %}
+        <div class="alert alert-success">Congratulations! Payment processed succesfully!</div>
+    {% else %}
+        <div class="alert alert-error">Sorry, something went terribly wrong!</div>
+    {% endif %}
     <h4>Payment details:</h4>
     <table class="table">
         <thead>

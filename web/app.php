@@ -17,7 +17,7 @@ $app->post('/{_locale}/payment-callback/{bank}', function($bank) use ($app) {
     }
 
     $paymentResponse = $app[$bank]->handleResponse($app['request']->request->all());
-    var_dump($paymentResponse);exit;
+
     return $app['twig']->render('payment_callback.html.twig', array(
         'response' => $paymentResponse
     ));

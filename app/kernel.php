@@ -28,7 +28,6 @@ $app['translator'] = $app->share($app->extend('translator', function($translator
 // Routing in templates
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
-
 // Prepare banklinks
 $app['swedbank'] = $app->share(function () use($app) {
     $protocol = new \Banklink\Protocol\iPizza(
@@ -43,4 +42,64 @@ $app['swedbank'] = $app->share(function () use($app) {
     );
 
     return new \Banklink\Swedbank($protocol, true);
+});
+
+$app['lhv'] = $app->share(function () use($app) {
+    $protocol = new \Banklink\Protocol\iPizza(
+        'uid274056',
+        'Banklink',
+        '1199331133121',
+        __DIR__.'/data/lhv/private_key.pem',
+        __DIR__.'/data/lhv/public_key.pem',
+        $app['url_generator']->generate('payment_callback', array(
+            'bank' => 'lhv'
+        ), true)
+    );
+
+    return new \Banklink\LHV($protocol, true);
+});
+
+$app['seb'] = $app->share(function () use($app) {
+    $protocol = new \Banklink\Protocol\iPizza(
+        'uid274085',
+        'Banklink SEB',
+        '119933113',
+        __DIR__.'/data/seb/private_key.pem',
+        __DIR__.'/data/seb/public_key.pem',
+        $app['url_generator']->generate('payment_callback', array(
+            'bank' => 'seb'
+        ), true)
+    );
+
+    return new \Banklink\SEB($protocol, true);
+});
+
+$app['sampo'] = $app->share(function () use($app) {
+    $protocol = new \Banklink\Protocol\iPizza(
+        'uid274108',
+        'Banklink Sampo',
+        '11993333113',
+        __DIR__.'/data/sampo/private_key.pem',
+        __DIR__.'/data/sampo/public_key.pem',
+        $app['url_generator']->generate('payment_callback', array(
+            'bank' => 'sampo'
+        ), true)
+    );
+
+    return new \Banklink\Sampo($protocol, true);
+});
+
+$app['krediidipank'] = $app->share(function () use($app) {
+    $protocol = new \Banklink\Protocol\iPizza(
+        'uid274124',
+        'Banklink Krediidipank',
+        '1122333113',
+        __DIR__.'/data/krediidipank/private_key.pem',
+        __DIR__.'/data/krediidipank/public_key.pem',
+        $app['url_generator']->generate('payment_callback', array(
+            'bank' => 'krediidipank'
+        ), true)
+    );
+
+    return new \Banklink\Krediidipank($protocol, true);
 });

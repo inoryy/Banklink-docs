@@ -124,6 +124,10 @@
             <a data-bank="sampo" href="#" class="btn btn-success start-transaction">Sampo</a>
             <a data-bank="krediidipank" href="#" class="btn btn-success start-transaction">Krediidipank</a>
             {% include '_form.html.twig' with { 'request' : swedbank, 'bank' : 'swedbank' } %}
+            {% include '_form.html.twig' with { 'request' : lhv, 'bank' : 'lhv' } %}
+            {% include '_form.html.twig' with { 'request' : seb, 'bank' : 'seb' } %}
+            {% include '_form.html.twig' with { 'request' : sampo, 'bank' : 'sampo' } %}
+            {% include '_form.html.twig' with { 'request' : krediidipank, 'bank' : 'krediidipank' } %}
         </div>
         <div id="example-code" class="span12">
             <p>Below is a simple code sample you can copy to your controller/template and see in action:</p>

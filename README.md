@@ -1,0 +1,1 @@
+Documentation for [Banklink](https://github.com/Inori/Banklink) library

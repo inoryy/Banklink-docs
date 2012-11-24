@@ -22,3 +22,8 @@ name: Name
 quantity: Quantity
 price_per_item: Price / item
 price_total: Price total
+
+order_id: Order ID
+transaction_id: Transaction ID
+sum: Sum
+date: Date

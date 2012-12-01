@@ -103,3 +103,15 @@ $app['krediidipank'] = $app->share(function () use($app) {
 
     return new \Banklink\Krediidipank($protocol, true);
 });
+
+$app['nordea'] = $app->share(function () use($app) {
+    $protocol = new \Banklink\Protocol\Solo(
+        '10274577',
+        'iC1pmFo2WkrH5bw2WXTzE5JhAaWCpDbi',
+        $app['url_generator']->generate('payment_callback', array(
+            'bank' => 'nordea'
+        ), true)
+    );
+
+    return new \Banklink\Nordea($protocol, true);
+});

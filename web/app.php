@@ -6,15 +6,15 @@ require_once __DIR__.'/../app/kernel.php';
 $app->get('/{_locale}', function () use ($app) {
     $lhvRequest          = $app['lhv']->preparePaymentRequest(12345, 25, $message = 'Beer + Movie');
     $sebRequest          = $app['seb']->preparePaymentRequest(12345, 25, $message = 'Beer + Movie');
-    $sampoRequest        = $app['sampo']->preparePaymentRequest(12345, 25, $message = 'Beer + Movie');
+    $danskebankRequest        = $app['danskebank']->preparePaymentRequest(12345, 25, $message = 'Beer + Movie');
     $swedbankRequest     = $app['swedbank']->preparePaymentRequest(12345, 25, $message = 'Beer + Movie');
     $krediidipankRequest = $app['krediidipank']->preparePaymentRequest(12345, 25, $message = 'Beer + Movie');
 
     return $app['twig']->render('homepage.html.twig', array(
-        'seb'      => $sebRequest,
-        'lhv'      => $lhvRequest,
-        'sampo'    => $sampoRequest,
-        'swedbank' => $swedbankRequest,
+        'seb'          => $sebRequest,
+        'lhv'          => $lhvRequest,
+        'danskebank'   => $danskebankRequest,
+        'swedbank'     => $swedbankRequest,
         'krediidipank' => $krediidipankRequest,
     ));
 })->value('_locale', 'en')->bind('homepage');

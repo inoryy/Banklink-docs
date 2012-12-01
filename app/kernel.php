@@ -74,7 +74,7 @@ $app['seb'] = $app->share(function () use($app) {
     return new \Banklink\SEB($protocol, true);
 });
 
-$app['sampo'] = $app->share(function () use($app) {
+$app['danskebank'] = $app->share(function () use($app) {
     $protocol = new \Banklink\Protocol\iPizza(
         'uid274108',
         'Banklink Sampo',
@@ -82,11 +82,11 @@ $app['sampo'] = $app->share(function () use($app) {
         __DIR__.'/data/sampo/private_key.pem',
         __DIR__.'/data/sampo/public_key.pem',
         $app['url_generator']->generate('payment_callback', array(
-            'bank' => 'sampo'
+            'bank' => 'danskebank'
         ), true)
     );
 
-    return new \Banklink\Sampo($protocol, true);
+    return new \Banklink\DanskeBank($protocol, true);
 });
 
 $app['krediidipank'] = $app->share(function () use($app) {

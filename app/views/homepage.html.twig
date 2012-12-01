@@ -69,7 +69,7 @@
               </tr>
               <tr>
                 <td><a target="_blank" href="http://www.nordea.ee/">Nordea</a></td>
-                <td><span class="label label-important">{{ 'no' | trans }}</span></td>
+                <td><span class="label label-success">{{ 'yes' | trans }}</span></td>
                 <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
               <tr>
@@ -78,7 +78,7 @@
                 <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
               <tr>
-                <td><a target="_blank" href="http://www.sampopank.ee/">Sampo</a></td>
+                <td><a target="_blank" href="http://www.sampopank.ee/">DanskeBank</a></td>
                 <td><span class="label label-success">{{ 'yes' | trans }}</span></td>
                 <td><span class="label label-warning">{{ 'no' | trans }}</span></td>
               </tr>
@@ -99,7 +99,7 @@
 <pre>
 {
     "require": {
-        "inori/banklink" : "~0.1"
+        "inori/banklink" : "~0.2"
     }
 }</pre>
 
@@ -122,12 +122,12 @@
             <a data-bank="swedbank" href="#" class="btn btn-success start-transaction">Swedbank</a>
             <a data-bank="lhv" href="#" class="btn btn-success start-transaction">LHV</a>
             <a data-bank="seb" href="#" class="btn btn-success start-transaction">SEB</a>
-            <a data-bank="sampo" href="#" class="btn btn-success start-transaction">Sampo</a>
+            <a data-bank="danskebank" href="#" class="btn btn-success start-transaction">Danskebank</a>
             <a data-bank="krediidipank" href="#" class="btn btn-success start-transaction">Krediidipank</a>
             {% include '_form.html.twig' with { 'request' : swedbank, 'bank' : 'swedbank' } %}
             {% include '_form.html.twig' with { 'request' : lhv, 'bank' : 'lhv' } %}
             {% include '_form.html.twig' with { 'request' : seb, 'bank' : 'seb' } %}
-            {% include '_form.html.twig' with { 'request' : sampo, 'bank' : 'sampo' } %}
+            {% include '_form.html.twig' with { 'request' : danskebank, 'bank' : 'danskebank' } %}
             {% include '_form.html.twig' with { 'request' : krediidipank, 'bank' : 'krediidipank' } %}
         </div>
         <div id="example-code" class="span12">

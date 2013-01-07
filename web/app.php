@@ -13,11 +13,11 @@ $app->get('/{_locale}', function () use ($app) {
     $nordeaRequest       = $app['nordea']->preparePaymentRequest(12345, 25, $message = 'Beer + Movie');
 
     return $app['twig']->render('homepage.html.twig', array(
-        'seb'      => $sebRequest,
-        'seb_test' => $sebTestRequest,
-        'lhv'      => $lhvRequest,
-        'sampo'    => $sampoRequest,
-        'swedbank' => $swedbankRequest,
+        'seb'          => $sebRequest,
+        'seb_test'     => $sebTestRequest,
+        'lhv'          => $lhvRequest,
+        'danskebank'   => $danskebankRequest,
+        'swedbank'     => $swedbankRequest,
         'krediidipank' => $krediidipankRequest,
         'nordea'       => $nordeaRequest,
     ));

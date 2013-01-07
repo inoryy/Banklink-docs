@@ -74,6 +74,22 @@ $app['seb'] = $app->share(function () use($app) {
     return new \Banklink\SEB($protocol, true);
 });
 
+// additional test enviroment to actual SEB servers
+$app['seb_test'] = $app->share(function () use($app) {
+    $protocol = new \Banklink\Protocol\iPizza(
+        'testvpos',
+        'Banklink SEB',
+        '10002050618003',
+        __DIR__.'/data/seb-test/private_key.pem',
+        __DIR__.'/data/seb-test/public_key.pem',
+        $app['url_generator']->generate('payment_callback', array(
+            'bank' => 'seb'
+        ), true)
+    );
+
+    return new \Banklink\SEB($protocol, false, 'https://www.seb.ee/cgi-bin/dv.sh/un3min.r');
+});
+
 $app['sampo'] = $app->share(function () use($app) {
     $protocol = new \Banklink\Protocol\iPizza(
         'uid274108',

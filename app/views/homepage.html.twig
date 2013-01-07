@@ -125,11 +125,11 @@
             <a data-bank="danskebank" href="#" class="btn btn-success start-transaction">Danskebank</a>
             <a data-bank="krediidipank" href="#" class="btn btn-success start-transaction">Krediidipank</a>
             <a data-bank="nordea" href="#" class="btn btn-success start-transaction">Nordea</a>
-			<a data-bank="seb_test" href="#" class="btn btn-info start-transaction">SEB (SEB-i testkond)</a>
+            <a data-bank="seb_test" href="#" class="btn btn-info start-transaction">SEB (SEB-i testkond)</a>
             {% include '_form.html.twig' with { 'request' : swedbank, 'bank' : 'swedbank' } %}
             {% include '_form.html.twig' with { 'request' : lhv, 'bank' : 'lhv' } %}
             {% include '_form.html.twig' with { 'request' : seb, 'bank' : 'seb' } %}
-		    {% include '_form.html.twig' with { 'request' : seb_test, 'bank' : 'seb_test' } %}
+            {% include '_form.html.twig' with { 'request' : seb_test, 'bank' : 'seb_test' } %}
             {% include '_form.html.twig' with { 'request' : danskebank, 'bank' : 'danskebank' } %}
             {% include '_form.html.twig' with { 'request' : krediidipank, 'bank' : 'krediidipank' } %}
             {% include '_form.html.twig' with { 'request' : nordea, 'bank' : 'nordea' } %}

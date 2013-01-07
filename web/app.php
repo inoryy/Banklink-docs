@@ -7,7 +7,7 @@ $app->get('/{_locale}', function () use ($app) {
     $lhvRequest          = $app['lhv']->preparePaymentRequest(12345, 25, $message = 'Beer + Movie');
     $sebRequest          = $app['seb']->preparePaymentRequest(12345, 25, $message = 'Beer + Movie');
     $danskebankRequest   = $app['danskebank']->preparePaymentRequest(12345, 25, $message = 'Beer + Movie');
-    $sebTestRequest      = $app['seb_test']->preparePaymentRequest(12345, 25, $message = 'Testime ');
+    $sebTestRequest      = $app['seb_test']->preparePaymentRequest(12345, 25, $message = 'Testime öäöü');
     $swedbankRequest     = $app['swedbank']->preparePaymentRequest(12345, 25, $message = 'Beer + Movie');
     $krediidipankRequest = $app['krediidipank']->preparePaymentRequest(12345, 25, $message = 'Beer + Movie');
     $nordeaRequest       = $app['nordea']->preparePaymentRequest(12345, 25, $message = 'Beer + Movie');

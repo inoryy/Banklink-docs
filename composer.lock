@@ -1,24 +1,26 @@
 {
-    "hash": "715e466d427d2e48ede1d3a4b02fbc35",
+    "hash": "5c7b79bcbdbea39f5833d352e9d17393",
     "packages": [
         {
             "name": "inori/banklink",
-            "version": "v0.1.5",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Inori/Banklink",
-                "reference": "v0.1.5"
+                "reference": "v0.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/Inori/Banklink/archive/v0.1.5.zip",
-                "reference": "v0.1.5",
+                "url": "https://github.com/Inori/Banklink/archive/v0.2.0.zip",
+                "reference": "v0.2.0",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": ">=5.3.3",
+                "ext-mbstring": "*",
+                "lib-openssl": "*"
             },
-            "time": "2012-11-24 17:27:24",
+            "time": "2012-12-01 12:13:17",
             "type": "library",
             "installation-source": "dist",
             "autoload": {

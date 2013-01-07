@@ -90,7 +90,7 @@ $app['seb_test'] = $app->share(function () use($app) {
     return new \Banklink\SEB($protocol, false, 'https://www.seb.ee/cgi-bin/dv.sh/un3min.r');
 });
 
-$app['sampo'] = $app->share(function () use($app) {
+$app['danskebank'] = $app->share(function () use($app) {
     $protocol = new \Banklink\Protocol\iPizza(
         'uid274108',
         'Banklink Sampo',
@@ -98,11 +98,11 @@ $app['sampo'] = $app->share(function () use($app) {
         __DIR__.'/data/sampo/private_key.pem',
         __DIR__.'/data/sampo/public_key.pem',
         $app['url_generator']->generate('payment_callback', array(
-            'bank' => 'sampo'
+            'bank' => 'danskebank'
         ), true)
     );
 
-    return new \Banklink\Sampo($protocol, true);
+    return new \Banklink\DanskeBank($protocol, true);
 });
 
 $app['krediidipank'] = $app->share(function () use($app) {
@@ -118,4 +118,16 @@ $app['krediidipank'] = $app->share(function () use($app) {
     );
 
     return new \Banklink\Krediidipank($protocol, true);
+});
+
+$app['nordea'] = $app->share(function () use($app) {
+    $protocol = new \Banklink\Protocol\Solo(
+        '10274577',
+        'iC1pmFo2WkrH5bw2WXTzE5JhAaWCpDbi',
+        $app['url_generator']->generate('payment_callback', array(
+            'bank' => 'nordea'
+        ), true)
+    );
+
+    return new \Banklink\Nordea($protocol, true);
 });

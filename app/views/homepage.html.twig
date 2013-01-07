@@ -122,15 +122,17 @@
             <a data-bank="swedbank" href="#" class="btn btn-success start-transaction">Swedbank</a>
             <a data-bank="lhv" href="#" class="btn btn-success start-transaction">LHV</a>
             <a data-bank="seb" href="#" class="btn btn-success start-transaction">SEB</a>
-            <a data-bank="sampo" href="#" class="btn btn-success start-transaction">Sampo</a>
+            <a data-bank="danskebank" href="#" class="btn btn-success start-transaction">Danskebank</a>
             <a data-bank="krediidipank" href="#" class="btn btn-success start-transaction">Krediidipank</a>
-            <a data-bank="seb_test" href="#" class="btn btn-info start-transaction">SEB (SEB-i testkond)</a>
+            <a data-bank="nordea" href="#" class="btn btn-success start-transaction">Nordea</a>
+			<a data-bank="seb_test" href="#" class="btn btn-info start-transaction">SEB (SEB-i testkond)</a>
             {% include '_form.html.twig' with { 'request' : swedbank, 'bank' : 'swedbank' } %}
             {% include '_form.html.twig' with { 'request' : lhv, 'bank' : 'lhv' } %}
             {% include '_form.html.twig' with { 'request' : seb, 'bank' : 'seb' } %}
-            {% include '_form.html.twig' with { 'request' : seb_test, 'bank' : 'seb_test' } %}
-            {% include '_form.html.twig' with { 'request' : sampo, 'bank' : 'sampo' } %}
+		    {% include '_form.html.twig' with { 'request' : seb_test, 'bank' : 'seb_test' } %}
+            {% include '_form.html.twig' with { 'request' : danskebank, 'bank' : 'danskebank' } %}
             {% include '_form.html.twig' with { 'request' : krediidipank, 'bank' : 'krediidipank' } %}
+            {% include '_form.html.twig' with { 'request' : nordea, 'bank' : 'nordea' } %}
         </div>
         <div id="example-code" class="span12">
             <p>Below is a simple code sample you can copy to your controller/template and see in action:</p>

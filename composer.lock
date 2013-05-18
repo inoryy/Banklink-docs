@@ -7,16 +7,16 @@
     "packages": [
         {
             "name": "inori/banklink",
-            "version": "v0.2.1",
+            "version": "v0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Inori/Banklink.git",
-                "reference": "v0.2.1"
+                "reference": "v0.2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Inori/Banklink/zipball/v0.2.1",
-                "reference": "v0.2.1",
+                "url": "https://api.github.com/repos/Inori/Banklink/zipball/v0.2.2",
+                "reference": "v0.2.2",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                 "Banklink",
                 "Pangalink"
             ],
-            "time": "2013-05-18 06:20:28"
+            "time": "2013-05-18 09:04:28"
         },
         {
             "name": "pimple/pimple",

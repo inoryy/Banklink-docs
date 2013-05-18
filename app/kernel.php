@@ -41,13 +41,13 @@ $app['swedbank'] = $app->share(function () use($app) {
         ), true)
     );
 
-    return new \Banklink\Swedbank($protocol, false, 'https://pangalink.net/banklink/swedbank');
+    return new \Banklink\Swedbank($protocol, true);
 });
 
 $app['lhv'] = $app->share(function () use($app) {
     $protocol = new \Banklink\Protocol\iPizza(
-        'uid274056',
-        'Banklink',
+        'uid401162',
+        'Banklink LHV',
         '1199331133121',
         __DIR__.'/data/lhv/private_key.pem',
         __DIR__.'/data/lhv/public_key.pem',
@@ -71,7 +71,7 @@ $app['seb'] = $app->share(function () use($app) {
         ), true)
     );
 
-    return new \Banklink\SEB($protocol, false, 'https://pangalink.net/banklink/seb');
+    return new \Banklink\SEB($protocol, true);
 });
 
 // additional test enviroment to actual SEB servers
@@ -92,11 +92,11 @@ $app['seb_test'] = $app->share(function () use($app) {
 
 $app['danskebank'] = $app->share(function () use($app) {
     $protocol = new \Banklink\Protocol\iPizza(
-        'uid274108',
-        'Banklink Sampo',
+        'uid401159',
+        'Banklink Danske',
         '11993333113',
-        __DIR__.'/data/sampo/private_key.pem',
-        __DIR__.'/data/sampo/public_key.pem',
+        __DIR__.'/data/danske/private_key.pem',
+        __DIR__.'/data/danske/public_key.pem',
         $app['url_generator']->generate('payment_callback', array(
             'bank' => 'danskebank'
         ), true)
@@ -107,7 +107,7 @@ $app['danskebank'] = $app->share(function () use($app) {
 
 $app['krediidipank'] = $app->share(function () use($app) {
     $protocol = new \Banklink\Protocol\iPizza(
-        'uid274124',
+        'uid401175',
         'Banklink Krediidipank',
         '1122333113',
         __DIR__.'/data/krediidipank/private_key.pem',
@@ -122,8 +122,8 @@ $app['krediidipank'] = $app->share(function () use($app) {
 
 $app['nordea'] = $app->share(function () use($app) {
     $protocol = new \Banklink\Protocol\Solo(
-        '10274577',
-        'iC1pmFo2WkrH5bw2WXTzE5JhAaWCpDbi',
+        '10401188',
+        'ADD1hu9K0iVDeDiUFpFAd8r2UveGNtQs',
         $app['url_generator']->generate('payment_callback', array(
             'bank' => 'nordea'
         ), true)

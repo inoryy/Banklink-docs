@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Inori/Banklink.git",
-                "reference": "v0.2.3"
+                "reference": "eb00091ddeb40610dbcfae4bf68bc50338e3fbaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Inori/Banklink/zipball/v0.2.3",
-                "reference": "v0.2.3",
+                "url": "https://api.github.com/repos/Inori/Banklink/zipball/eb00091ddeb40610dbcfae4bf68bc50338e3fbaa",
+                "reference": "eb00091ddeb40610dbcfae4bf68bc50338e3fbaa",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                 "Banklink",
                 "Pangalink"
             ],
-            "time": "2013-05-18 09:42:08"
+            "time": "2013-05-18 15:11:41"
         },
         {
             "name": "pimple/pimple",

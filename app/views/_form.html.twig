@@ -1,5 +1,3 @@
 <form id="{{ bank }}" method="post" action="{{ request.requestUrl }}">
-    {% for name, value in request.requestData %}
-        <input type="hidden" name="{{ name }}" value="{{ value }}" />
-    {% endfor %}
+    {{ request.buildRequestHtml() | raw }}
 </form>

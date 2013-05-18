@@ -83,7 +83,7 @@ $app['seb_test'] = $app->share(function () use($app) {
         __DIR__.'/data/seb-test/private_key.pem',
         __DIR__.'/data/seb-test/public_key.pem',
         $app['url_generator']->generate('payment_callback', array(
-            'bank' => 'seb'
+            'bank' => 'seb_test'
         ), true)
     );
 

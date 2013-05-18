@@ -126,7 +126,10 @@ $app['nordea'] = $app->share(function () use($app) {
         'ADD1hu9K0iVDeDiUFpFAd8r2UveGNtQs',
         $app['url_generator']->generate('payment_callback', array(
             'bank' => 'nordea'
-        ), true)
+        ), true),
+        null,
+        null,
+        'sha1'
     );
 
     return new \Banklink\Nordea($protocol, true);

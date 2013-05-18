@@ -30,8 +30,8 @@ $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 // Prepare banklinks
 $app['swedbank'] = $app->share(function () use($app) {
-    $protocol = new \Banklink\Protocol\iPizza(
-        'uid261056',
+    $protocol = new \Banklink\Protocol\SwedbankiPizza(
+        'uid401120',
         'Banklink',
         '1199331133112',
         __DIR__.'/data/swedbank/private_key.pem',
@@ -41,7 +41,7 @@ $app['swedbank'] = $app->share(function () use($app) {
         ), true)
     );
 
-    return new \Banklink\Swedbank($protocol, true);
+    return new \Banklink\Swedbank($protocol, false, 'https://pangalink.net/banklink/swedbank');
 });
 
 $app['lhv'] = $app->share(function () use($app) {
@@ -61,7 +61,7 @@ $app['lhv'] = $app->share(function () use($app) {
 
 $app['seb'] = $app->share(function () use($app) {
     $protocol = new \Banklink\Protocol\iPizza(
-        'uid274085',
+        'uid401133',
         'Banklink SEB',
         '119933113',
         __DIR__.'/data/seb/private_key.pem',
@@ -71,7 +71,7 @@ $app['seb'] = $app->share(function () use($app) {
         ), true)
     );
 
-    return new \Banklink\SEB($protocol, true);
+    return new \Banklink\SEB($protocol, false, 'https://pangalink.net/banklink/seb');
 });
 
 // additional test enviroment to actual SEB servers

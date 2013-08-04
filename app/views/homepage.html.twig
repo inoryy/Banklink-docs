@@ -154,7 +154,7 @@ $swedbankRequest = $swedbank->preparePaymentRequest(1, 25, $message = 'Beer + Mo
 </pre>
 <pre>
 &lt;form action="&lt;?php echo $swedbankRequest->getRequestUrl() ?&gt;" method="post"&gt;
-    &lt;?php $swedbankRequest->buildRequestHtml() ?&gt;
+    &lt;?php echo $swedbankRequest->buildRequestHtml() ?&gt;
     &lt;input type="submit" value="Swedbank" /&gt;
 &lt;/form&gt;
 </pre>
